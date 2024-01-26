@@ -19,14 +19,15 @@ class TextAreaDemo(EasyFrame):
 	#Definition of our classes' constructor method
 	def __init__(self):
 		# Call to the EasyFrame class constructor.
-		EasyFrame.__init__(self, title = "Salary Calculator", width = 600, height = 600)
+		EasyFrame.__init__(self, title = "Salary Calculator", width = 600, height = 600, background = "yellow")
 		# Create a variable from the Font class.
 		myFont = Font(family = "Verdana", size = 20, slant = "italic")
+		myFont1 = Font(family = "Arial", size = 20, slant = "italic")
 
 		self.addLabel(text = "Initial Amount", row = 0, column = 0, font = myFont, background = "skyblue")
-		self.addLabel(text = "Number of Years", row = 1, column = 0, font = myFont, background = "skyblue")
-		self.addLabel(text = "Interest Rate in %", row = 2, column = 0, font = myFont, background = "skyblue")
-		self.amount = self.addFloatField(value = 0.0, row = 0, column = 1)
+		self.addLabel(text = "Number of Years", row = 1, column = 0, font = myFont, background = "palegoldenrod")
+		self.addLabel(text = "Interest Rate in %", row = 2, column = 0, font = myFont, background = "Aqua")
+		self.amount = self.addFloatField(value = 0.0, row = 0, column = 1,)
 		self.period = self.addIntegerField(value = 0, row = 1, column = 1, width = 20)
 		self.rate = self.addFloatField(value = 0, row = 2, column = 1)
 		self.compute = self.addButton(text = "Compute", row = 3, column = 0, columnspan = 2, command = self.compute)
